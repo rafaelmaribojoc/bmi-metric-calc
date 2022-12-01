@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class App {
+public class Main {
     public static void main(String[] args) throws Exception {
         //Declaration
         double height, weight, bmi;
@@ -21,7 +21,7 @@ public class App {
         // System.out.println(Math.floor(bmi));
 
         //Conditional Process
-        if (bmi < 5.5) { //used to be bmi == 0 but ineffective so replaced.
+        if (bmi <= 5.5) { //used to be bmi == 0 but ineffective so replaced.
             output = "Invalid height! Put your height in meters.\n"
             + "Example: 175 (cm) to 1.75 (m)\n";
         } else if (bmi >= 30.0) {
@@ -29,6 +29,8 @@ public class App {
         } else if (bmi >= 25.5 && bmi < 30.0) {
             output = "Overweight";
         } else if (bmi >= 18.5 && bmi < 25.5) {
+            output = "Normal";
+        } else if (bmi < 18.5) {
             output = "Underweight";
         } else {
             output = "No input!";
